@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Sign-In - Amazon Clone</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="login-page">
+    <!-- Simplified Header for Login -->
+    <header class="login-header">
+        <div class="container">
+            <div class="login-logo">
+                <a href="index.html">
+                    <h2>amazon</h2>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Login Form -->
+    <main class="login-main">
+        <div class="login-container">
+            <div class="login-box">
+                <h1>Sign in</h1>
+                
+                <form class="login-form" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="email">Email or mobile phone number</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <button type="submit" class="continue-btn">Continue</button>
+                    
+                    <div class="divider">
+                        <span>or</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                        <div class="password-help">
+                            <a href="#" class="forgot-password">Forgot your password?</a>
+                        </div>
+                    </div>
+                    
+                    <button type="button" class="signin-btn" onclick="signIn()">Sign in</button>
+                    
+                    <div class="keep-signed-in">
+                        <input type="checkbox" id="keepSignedIn" name="keepSignedIn">
+                        <label for="keepSignedIn">Keep me signed in</label>
+                        <a href="#" class="details-link">Details</a>
+                    </div>
+                </form>
+                
+                <div class="login-footer">
+                    <p>By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.</p>
+                </div>
+                
+                <div class="help-section">
+                    <details>
+                        <summary>Need help?</summary>
+                        <div class="help-content">
+                            <a href="#">Forgot your password?</a>
+                            <a href="#">Other issues with Sign-In</a>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            
+            <div class="create-account-section">
+                <div class="divider-line">
+                    <span>New to Amazon?</span>
+                </div>
+                <button class="create-account-btn" onclick="location.href='register.html'">Create your Amazon account</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Login Footer -->
+    <footer class="login-footer-section">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Conditions of Use</a>
+                <a href="#">Privacy Notice</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="footer-text">
+                <p>&copy; 1996-2024, Amazon.com, Inc. or its affiliates</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

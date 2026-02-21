@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Amazon Clone</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <h2>amazon</h2>
+                    </a>
+                </div>
+                
+                <div class="search-bar">
+                    <select class="search-category">
+                        <option>All</option>
+                        <option>Electronics</option>
+                        <option>Fashion</option>
+                        <option>Books</option>
+                    </select>
+                    <input type="text" placeholder="Search Amazon">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="language">
+                        <i class="fas fa-globe"></i>
+                        <span>EN</span>
+                    </div>
+                    <div class="account">
+                        <a href="login.html">
+                            <span>Hello, Sign in</span>
+                            <strong>Account & Lists</strong>
+                        </a>
+                    </div>
+                    <div class="orders">
+                        <span>Returns</span>
+                        <strong>& Orders</strong>
+                    </div>
+                    <div class="cart">
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">2</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-nav">
+            <div class="container">
+                <div class="nav-left">
+                    <div class="hamburger">
+                        <i class="fas fa-bars"></i>
+                        <span>All</span>
+                    </div>
+                    <nav class="main-nav">
+                        <a href="products.html">Today's Deals</a>
+                        <a href="products.html">Customer Service</a>
+                        <a href="products.html">Registry</a>
+                        <a href="products.html">Gift Cards</a>
+                        <a href="products.html">Sell</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Content -->
+    <main class="cart-main">
+        <div class="container">
+            <div class="cart-layout">
+                <!-- Shopping Cart -->
+                <div class="cart-content">
+                    <div class="cart-header">
+                        <h1>Shopping Cart</h1>
+                        <span class="deselect-all">Deselect all items</span>
+                        <span class="price-label">Price</span>
+                    </div>
+
+                    <!-- Cart Items -->
+                    <div class="cart-items">
+                        <!-- Cart Item 1 -->
+                        <div class="cart-item">
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="item1" checked>
+                            </div>
+                            <div class="item-image">
+                                <img src="https://via.placeholder.com/180x180/FF9900/FFFFFF?text=Headphones" alt="Sony Headphones">
+                            </div>
+                            <div class="item-details">
+                                <h3><a href="product-detail.html">Sony WH-1000XM4 Wireless Noise Canceling Headphones</a></h3>
+                                <p class="item-availability in-stock">In Stock</p>
+                                <p class="item-shipping">
+                                    <i class="fas fa-check" style="color: green;"></i>
+                                    Eligible for FREE Shipping & FREE Returns
+                                </p>
+                                <div class="item-options">
+                                    <span class="gift-option">
+                                        <input type="checkbox" id="gift1">
+                                        <label for="gift1">This will be a gift</label>
+                                        <a href="#" class="learn-more">Learn more</a>
+                                    </span>
+                                </div>
+                                <div class="item-actions">
+                                    <div class="quantity-selector">
+                                        <label for="qty1">Qty:</label>
+                                        <select id="qty1" onchange="updateQuantity(this, 279.99)">
+                                            <option value="1" selected>1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                    <button class="delete-btn" onclick="removeItem(this)">Delete</button>
+                                    <button class="save-later-btn">Save for later</button>
+                                    <button class="compare-btn">Compare with similar items</button>
+                                    <button class="share-btn">Share</button>
+                                </div>
+                            </div>
+                            <div class="item-price">
+                                <span class="price-value">$279.99</span>
+                            </div>
+                        </div>
+
+                        <!-- Cart Item 2 -->
+                        <div class="cart-item">
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="item2" checked>
+                            </div>
+                            <div class="item-image">
+                                <img src="https://via.placeholder.com/180x180/FF9900/FFFFFF?text=Smart+Watch" alt="Smart Watch">
+                            </div>
+                            <div class="item-details">
+                                <h3><a href="product-detail.html">Apple Watch Series 9 GPS 45mm Midnight Aluminum Case</a></h3>
+                                <p class="item-availability in-stock">In Stock</p>
+                                <p class="item-shipping">
+                                    <i class="fas fa-check" style="color: green;"></i>
+                                    Eligible for FREE Shipping & FREE Returns
+                                </p>
+                                <div class="item-options">
+                                    <span class="gift-option">
+                                        <input type="checkbox" id="gift2">
+                                        <label for="gift2">This will be a gift</label>
+                                        <a href="#" class="learn-more">Learn more</a>
+                                    </span>
+                                </div>
+                                <div class="item-actions">
+                                    <div class="quantity-selector">
+                                        <label for="qty2">Qty:</label>
+                                        <select id="qty2" onchange="updateQuantity(this, 399.99)">
+                                            <option value="1" selected>1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                    <button class="delete-btn" onclick="removeItem(this)">Delete</button>
+                                    <button class="save-later-btn">Save for later</button>
+                                    <button class="compare-btn">Compare with similar items</button>
+                                    <button class="share-btn">Share</button>
+                                </div>
+                            </div>
+                            <div class="item-price">
+                                <span class="price-value">$399.99</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Subtotal -->
+                    <div class="cart-subtotal">
+                        <span class="subtotal-text">Subtotal (2 items): </span>
+                        <span class="subtotal-price">$679.98</span>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <div class="summary-card">
+                        <div class="summary-header">
+                            <i class="fas fa-check-circle" style="color: green;"></i>
+                            <span>Your order qualifies for FREE Shipping.</span>
+                        </div>
+                        
+                        <div class="summary-total">
+                            <span class="total-text">Subtotal (2 items): </span>
+                            <span class="total-price">$679.98</span>
+                        </div>
+
+                        <div class="gift-option-summary">
+                            <input type="checkbox" id="giftOrderSummary">
+                            <label for="giftOrderSummary">This order contains a gift</label>
+                        </div>
+
+                        <button class="checkout-btn" onclick="proceedToCheckout()">
+                            Proceed to checkout
+                        </button>
+                    </div>
+
+                    <!-- Recommended Products -->
+                    <div class="recommended-products">
+                        <h3>Customers who bought items in your cart also bought</h3>
+                        <div class="recommended-item">
+                            <img src="https://via.placeholder.com/100x100/FF9900/FFFFFF?text=Case" alt="Case">
+                            <div class="recommended-info">
+                                <h4>Headphone Case</h4>
+                                <div class="rating">★★★★☆ (234)</div>
+                                <div class="price">$19.99</div>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="recommended-item">
+                            <img src="https://via.placeholder.com/100x100/FF9900/FFFFFF?text=Cable" alt="Cable">
+                            <div class="recommended-info">
+                                <h4>USB-C Cable</h4>
+                                <div class="rating">★★★★★ (1,567)</div>
+                                <div class="price">$12.99</div>
+                                <button class="add-to-cart-btn">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="back-to-top">
+            <a href="#top">Back to top</a>
+        </div>
+        
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Get to Know Us</h4>
+                        <ul>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">About Amazon</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Make Money with Us</h4>
+                        <ul>
+                            <li><a href="#">Sell products on Amazon</a></li>
+                            <li><a href="#">Sell on Amazon Business</a></li>
+                            <li><a href="#">Sell apps on Amazon</a></li>
+                            <li><a href="#">Become an Affiliate</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-logo">
+                    <a href="index.html">amazon</a>
+                </div>
+                <div class="footer-legal">
+                    <p>&copy; 2024 Amazon Clone. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

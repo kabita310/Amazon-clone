@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone - Online Shopping</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <h2>amazon</h2>
+                    </a>
+                </div>
+                
+                <div class="search-bar">
+                    <select class="search-category">
+                        <option>All</option>
+                        <option>Electronics</option>
+                        <option>Fashion</option>
+                        <option>Books</option>
+                    </select>
+                    <input type="text" placeholder="Search Amazon">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="language">
+                        <i class="fas fa-globe"></i>
+                        <span>EN</span>
+                    </div>
+                    <div class="account">
+                        <a href="login.html">
+                            <span>Hello, Sign in</span>
+                            <strong>Account & Lists</strong>
+                        </a>
+                    </div>
+                    <div class="orders">
+                        <span>Returns</span>
+                        <strong>& Orders</strong>
+                    </div>
+                    <div class="cart">
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-nav">
+            <div class="container">
+                <div class="nav-left">
+                    <div class="hamburger">
+                        <i class="fas fa-bars"></i>
+                        <span>All</span>
+                    </div>
+                    <nav class="main-nav">
+                        <a href="products.html">Today's Deals</a>
+                        <a href="products.html">Customer Service</a>
+                        <a href="products.html">Registry</a>
+                        <a href="products.html">Gift Cards</a>
+                        <a href="products.html">Sell</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="banner-content">
+            <div class="banner-slide active">
+                <img src="./assets/amazon page.jpg" alt="Prime Day">
+            </div>
+        </div>
+        <div class="banner-overlay">
+            <div class="container">
+                <h2>You are on amazon.com. You can also shop on Amazon for millions of products with fast local delivery.</h2>
+                <button class="cta-button">Click here to go to amazon.com</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="product-categories">
+        <div class="container">
+            <div class="category-grid">
+                <div class="category-card">
+                    <h3>Electronics</h3>
+                    <div class="category-products">
+                        <img src="./assets/phone.jpg" alt="Phone">
+                      <img src="./assets/laptop.jpg" alt="Laptop">
+                    
+                    </div>
+                    <a href="products.html?category=electronics">Shop now</a>
+                </div>
+                
+                <div class="category-card">
+                    <h3>Fashion</h3>
+                    <div class="category-products">
+                        <img src="./assets/shirt.jpg" alt="Shirt">
+                        <img src="./assets/shoes.jpg" alt="Shoes">
+                    </div>
+                    <a href="products.html?category=fashion">Shop now</a>
+                </div>
+                
+                <div class="category-card">
+                    <h3>Home & Kitchen</h3>
+                    <div class="category-products">
+                        <img src="./assets/kitchen.jpg" alt="Kitchen">
+                        <img src="./assets/decor.jpg" alt="Decor">
+                    </div>
+                    <a href="products.html?category=home">Shop now</a>
+                </div>
+                
+                <div class="category-card">
+                    <h3>Books</h3>
+                    <div class="category-products">
+                        <img src="./assets/books.jpg" alt="Books">
+                        <img src="./assets/kindle.jpg" alt="Kindle">
+                    </div>
+                    <a href="products.html?category=books">Shop now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product-card" onclick="location.href='product-detail.html'">
+                    <img src="./assets/wireless headphones.jpg" alt="Product 1">
+                    <h3>Wireless Headphones</h3>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span>(1,234)</span>
+                    </div>
+                    <div class="price">
+                        <span class="current-price">$79.99</span>
+                        <span class="original-price">$99.99</span>
+                    </div>
+                </div>
+                
+                <div class="product-card" onclick="location.href='product-detail.html'">
+                    <img src="./assets/smart watch.jpg" alt="Product 2">
+                    <h3>Smart Watch</h3>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span>(856)</span>
+                    </div>
+                    <div class="price">
+                        <span class="current-price">$199.99</span>
+                        <span class="original-price">$249.99</span>
+                    </div>
+                </div>
+                
+                <div class="product-card" onclick="location.href='product-detail.html'">
+                    <img src="./assets/mouse.webp" alt="Product 3">
+                    <h3>Gaming Mouse</h3>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span>(432)</span>
+                    </div>
+                    <div class="price">
+                        <span class="current-price">$49.99</span>
+                        <span class="original-price">$69.99</span>
+                    </div>
+                </div>
+                
+                <div class="product-card" onclick="location.href='product-detail.html'">
+                    <img src="./assets/bluetooth.jpg" alt="Product 4">
+                    <h3>Bluetooth Speaker</h3>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span>(2,108)</span>
+                    </div>
+                    <div class="price">
+                        <span class="current-price">$89.99</span>
+                        <span class="original-price">$119.99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="back-to-top">
+            <a href="#top">Back to top</a>
+        </div>
+        
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Get to Know Us</h4>
+                        <ul>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">About Amazon</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Make Money with Us</h4>
+                        <ul>
+                            <li><a href="#">Sell products on Amazon</a></li>
+                            <li><a href="#">Sell on Amazon Business</a></li>
+                            <li><a href="#">Sell apps on Amazon</a></li>
+                            <li><a href="#">Become an Affiliate</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Amazon Payment Products</h4>
+                        <ul>
+                            <li><a href="#">Amazon Business Card</a></li>
+                            <li><a href="#">Shop with Points</a></li>
+                            <li><a href="#">Reload Your Balance</a></li>
+                            <li><a href="#">Amazon Currency Converter</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Let Us Help You</h4>
+                        <ul>
+                            <li><a href="#">Amazon and COVID-19</a></li>
+                            <li><a href="#">Your Account</a></li>
+                            <li><a href="#">Your Orders</a></li>
+                            <li><a href="#">Shipping Rates & Policies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-logo">
+                    <a href="index.html">amazon</a>
+                </div>
+                <div class="footer-legal">
+                    <p>&copy; 2024 Amazon Clone. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
