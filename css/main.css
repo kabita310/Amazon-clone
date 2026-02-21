@@ -15,9 +15,23 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    
+}
+.nav-logo {
+    height: 60px;         
+    display: flex;
+    align-items: center;   
 }
 
-/* Typography */
+.nav-logo img {
+    height: 40px;          
+    width: auto;           
+    object-fit: contain;   
+}
+
+
+
+
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
 }
@@ -81,14 +95,16 @@ a:hover {
 }
 
 .banner-slide.active {
-    display: block;
+    display:grid;
     object-fit:cover;
+    width:100%;
+    height:400px;
    
   
 
 }
 
-.banner-slide img {
+.banner-slide.active img {
     width: 100%;
     height: 100%;
 }
